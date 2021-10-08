@@ -32,6 +32,7 @@ function createGridBoxes(canvas, size) {
         let box = document.createElement('div');
         box.classList.add('box');
         box.addEventListener('mouseover', hoverTrail);
+        box.addEventListener('touchmove', hoverTrail);
         canvas.appendChild(box);
     }
 }
