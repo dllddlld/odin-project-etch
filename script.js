@@ -50,12 +50,13 @@ function hoverTrail(e) {
 
 function resetGrid() {
     let size = askForInput();
+    if (size === null) return;
     createGrid(size);
 }
 
 function askForInput() {
     let input = prompt('Enter grid size (whole number, max 100)', '16');
-    if (input === null) return;
+    if (input === null || isNaN(input)) return null;
     if (parseInt(input) > 100) {
         input = askForInput();
     }
